@@ -1,0 +1,38 @@
+[appendix]
+:appendix-caption: Annex
+== UML notations
+
+=== Class Diagrams Notation
+
+A class diagram shows a collection of declarative (static) model elements, such as classes, types, and their contents and relationships. Classes and relationships represent real-world concepts to describe the structure of a system. The CDB Core Standard is presented in this document in diagrams using the Unified Modeling Language (UML) class diagrams. The UML notations used in this standard are described here (see ISO TS 19103, Geographic information - Conceptual schema language for the details).
+
+A relationship is a general term covering the specific types of logical connections found on class and objects diagrams. UML shows the following relationships:
+
+[cols=",,",]
+|===============================================================================================================================================================================================================================================================================================================================================================================================================
+|*Relationships* |*Definition* |*Diagram*
+|Association |It is semantic relationship between two or more classes that specifies links among their instances. In association, an attribute of the dependent class is an instance of the independent class. a|image::images/image22.png[image,width=102,height=60]image::images/image23.png[image,width=138,height=62]
+|Aggregation |Form of association that specifies a whole-part relationship between the aggregate (whole) and a component part. a|image::images/image24.png[image,width=137,height=58]
+|https://en.wikipedia.org/wiki/Object_composition[Composition] |It is an aggregation and stronger variant of the "has a" association relationship; if the container is destroyed, normally every instance that it contains is destroyed as well. a|image::images/image25.png[image,width=141,height=28]
+|Generalization |Taxonomic relationship between a more general element and a more specific element. It is also known as the https://en.wikipedia.org/wiki/Inheritance_(computer_science)[inheritance] or "is a" relationship. The https://en.wikipedia.org/wiki/Superclass_(computer_science)[superclass] (base class) is also known as the "parent". a|image::images/image26.png[image,width=136,height=63]
+|Realizations |It is shown on classes, interfaces, components, and packages that connects a client element with a supplier element and shows that the class realizes the operations offered by the interface. a|image::images/image27.png[image,width=154,height=61]
+|===============================================================================================================================================================================================================================================================================================================================================================================================================
+
+The UML representation of an association is a line with an optional arrowhead indicating the role of the object(s) in the relationship, and an optional notation at each end indicating the multiplicity (the number of objects that participate in the association) of instances of that entity as listed in the below table:
+
+[cols=",",]
+|===================================
+|0..1 |No instances, or one instance
+|1, 1..1 |Exactly one instance
+|0..* |Zero or more instances
+|n |Specific number
+|1..* |One or more instances
+|===================================
+
+In the document, UML diagrams typically identifies a stereotype with a bracketed comment for each object identifying whether it is a class, interface, etc. Additionally, the UMLs are color-coded as follow to show different stereotypes:
+
+[cols=",,",]
+|======================================================
+|Elements (e.g. Class & Object) {set:cellbgcolor:#F3F3F3}|Interface {set:cellbgcolor:#8E7CC3}|Description{set:cellbgcolor:#93C47D}
+|Table {set:cellbgcolor:#6FA8DC}|Data Type {set:cellbgcolor:#FFD966}|Profile{set:cellbgcolor:aqua}
+|======================================================

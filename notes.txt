@@ -1,0 +1,2 @@
+The Table of Contents (ToC) of the MS Word version lists Section 3 as "Metadata Schema" but the actual title of Section 3 in the body of the document is "Metadata and Controlled Vocabulary Schema".
+The Asciidoc version uses "Metadata and Controlled Vocabulary Schema" as the title and the ToC entry.

@@ -1,0 +1,12 @@
+[appendix]
+:appendix-caption: Annex
+== Revision History
+
+{set:cellbgcolor:#FFFFFF}
+
+[width="90%",options="header"]
+|===
+|Date |Release |Editor | Primary clauses modified |Description
+|2018-03-20 |1.1 |S. Saeedi | all | Revision
+|2016-04-04 |1.0 |S. Saeedi | all | Initial version
+|===
