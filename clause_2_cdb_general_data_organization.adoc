@@ -1,6 +1,6 @@
 == CDB General Data Organization
 
-The CDB is composed of several datasets that share a common structure. The following sections present the general organization and structure of all CDB datasets. The CDB standard does not define or enforce an operating system or file system. Nonetheless, the implementation of a CDB storage sub-system must conform to absolute minimum file system requirements called for by the standard. A CDB data store uses existing common file formats for storing data in various formats such as TIFF/GeoTIFF (raster data), JPEG 2000 (imagery data), OpenFlight (3D models), ShapeFiles (vector data and radar cross sections), RGB (textures), XML (Metadata) and ZIP (file collection). The current version of CDB uses a consolidation of data dictionaries from DIGEST, DGIWG, SEDRIS and UHRB (See Volume 3: CDB Terms and Definitions). In addition, it is possible to extend the CDB Feature Data Dictionary (FDD) by using the extension capabilities and adding a new FDD XML schema file to access additional feature data codes. The UML diagram in Figure 3 describes how the data is categorized in tiles, layers and LODs. This is the basis for the CDB geospatial data categorization.
+The CDB is composed of several datasets that share a common structure. The following sections present the general organization and structure of all CDB datasets. The CDB standard does not define or enforce an operating system or file system. Nonetheless, the implementation of a CDB storage sub-system must conform to absolute minimum file system requirements called for by the standard. A CDB data store uses existing common file formats for storing data in various formats such as TIFF/GeoTIFF (raster data), JPEG 2000 (imagery data), OpenFlight (3D models), GeoPackages (vector data and radar cross sections), ShapeFiles (vector data and radar cross sections), SGI image format aka RGB (textures), XML (Metadata) and ZIP (file collection). The current version of CDB uses a consolidation of data dictionaries from DIGEST, DGIWG, SEDRIS and UHRB (See Volume 3: CDB Terms and Definitions). In addition, it is possible to extend the CDB Feature Data Dictionary (FDD) by using the extension capabilities and adding a new FDD XML schema file to access additional feature data codes. The UML diagram in Figure 3 describes how the data is categorized in tiles, layers and LODs. This is the basis for the CDB geospatial data categorization.
 
 [#img_UMLdiagramoftheCDBgeneraldataorganization,reftext='{figure-caption} {counter:figure-num}']
 .UML diagram of the CDB general data organization
@@ -39,7 +39,6 @@ This section shows the relationship between the tile structure, layers and LODs.
 .UML diagram of the Geocell, tile and LOD concept
 image::images/image4.png[image,width=366,height=415]
 
-
 === CDB File System
 
 This section describes how a current version of a CDB conformant data store uses the computer’s native file system to store data in files and directories, what the CDB versioning structure is, and how the data is categorized. Further, this section defines the structure of a CDB conformant data store, i.e., the name of all directories forming the CDB hierarchy, as well as the name of all files found in the CDB hierarchy. An important feature of the CDB standard is that all CDB file names are unique and that the filename alone is sufficient to infer the path of the file.
@@ -61,7 +60,6 @@ A CDB Version is a collection of CDB and/or user-defined datasets. A CDB Version
 .UML diagram of CDB version concept
 image::images/image5.png[image,width=587,height=736]
 
-
 The diagram shows that a CDB Version contains CDB Datasets. In addition, it states which CDB Version Number has been used to build the CDB content. Finally, the CDB Version has a reference to another CDB Version. This reference allows the creation of a chain of CDB Versions. By chaining two CDB Versions together, the user can replace files in a previous CDB Version with new ones in a newer CDB Version data store. The diagram shows that a CDB Extension inherits all the attributes of a CDB Version and adds its own attributes, a name and a version number (of the extension). The client application checks the name attribute to recognize and process known CDB Extensions and unrecognized CDB Extensions are skipped.
 
 === Model Type
@@ -71,7 +69,6 @@ The term Model refers to all of the modeled representations of a cultural featur
 [#img_UMLpackagediagramofthemodeltype,reftext='{figure-caption} {counter:figure-num}']
 .UML package diagram of the model type
 image::images/image6.png[image,width=513,height=339]
-
 
 The term Model-LOD refers to a specific level of detail of a Model. The main properties of the CDB 2D/3D model type UML diagram are listed below.
 
@@ -92,7 +89,6 @@ A moving model is typically characterized as if the feature can move (on its own
 [#img_UMLdiagramofthe3Dmovingmodel,reftext='{figure-caption} {counter:figure-num}']
 .UML diagram of the 3D moving model
 image::images/image7.png[image,width=624,height=428]
-
 
 During the course of a multi-player simulation, each client-device is typically solicited to provide a modeled representation of each player. The activation of such players requires the client-device to access the appropriate modeled representation of each player. There are a large number of simulations where the player types are characterized by their Distributed Interactive Simulation footnote:[IEEE 1278 series Distributed Interactive Simulation.] (DIS) code. To this end, the CDB data store provides a moving model library whose structure provides a convenient categorization of models by their DIS code as shown in the following diagram.
 
