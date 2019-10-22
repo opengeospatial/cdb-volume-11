@@ -13,9 +13,9 @@ ogcdoc, OGC document, UML, conceptual model, raster, tiles, vector, CDB, Common 
 
 [big]*iii.   Preface*
 
-The industry-maintained CDB model and data store structure has been discussed and demonstrated at OGC Technical Committee meetings since September 2013. This document, the first UML conceptual model for OGC CDB standard, is one of the 12 documents that comprise the OGC CDB modular standard. The UML conceptual model establishes a single set of consistent concepts that could be also implemented using other encoding mechanisms.
-The CDB standard is originally based on the OGC CDB Best Practice documents, which were submitted to the OGC by CAE Inc. on behalf of the CDB implementation community and user group. CDB is currently widely implemented in the defence and aviation simulation communities. The intent is that this initial OGC version of the CDB standard be backwards compatible with existing implementations but that terminology and concepts be aligned as appropriate with the OGC technical baseline. Future work is planned to align the standard with other OGC standards and to provide Best Practices focused on how to use CDB with the existing OGC standards baseline, such as OGC GeoPackage, CityGML, Web Map Service (WMS), Web Feature Service (WFS), and Web Coverage Service (WCS).
+The industry-maintained CDB model and data store structure has been discussed and demonstrated at OGC Technical Committee meetings since September 2013. This document, the first UML conceptual model for OGC CDB standard, is one of the 15 documents that comprise the OGC CDB modular standard. The UML conceptual model establishes a single set of consistent concepts that could be also implemented using other encoding mechanisms.
 
+The CDB standard is originally based on the OGC CDB Best Practice documents, which were submitted to the OGC by CAE Inc. on behalf of the CDB implementation community and user group. CDB is currently widely implemented in the defence and aviation simulation communities. The intent is that this initial OGC version of the CDB standard be backwards compatible with existing implementations but that terminology and concepts be aligned as appropriate with the OGC technical baseline. Future work is planned to align the standard with other OGC standards and to provide Best Practices focused on how to use CDB with the existing OGC standards baseline, such as OGC GeoPackage, CityGML, Web Map Service (WMS), Web Feature Service (WFS), and Web Coverage Service (WCS).
 
 Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
 
@@ -32,7 +32,6 @@ Organization name(s)
 * Envitia, Ltd
 * Glen Johnson, OGC Individual Member
 * KaDSci, LLC
-* Laval University
 * Open Site Plan
 * University of Calgary
 * UK Met Office
@@ -56,8 +55,11 @@ All questions regarding this submission should be directed to the editor or the 
 [big]*vi.     Future Work*
 
 The CDB community anticipates that additional standardization will be required to prescribe content appropriate to targeted simulation applications.  In its current form, the CDB standard does not mandate synthetic environmental richness, quality and resolution. In Version 1.1, additional informative clauses were incorporated that provide guidance on how to include and encode global (data store wide) and local (data set specific) geospatial metadata.
+
 The OGC CDB Standards Working Group (SWG) members understand there is a requirement for eventual alignment of the CDB standard with the OGC/ISO standards baseline. In Version 1 of the CDB standard, effort was invested to begin aligning terminology and concepts, specifically in the coordinate reference system discussions and requirements.
+
 The current version of the CDB standard is fully backwards compatible with version 1.0 of the CDB standard as defined and implemented by the current CDB implementer and user community. The requirements for a CDB data store are focused on the ability to store, manage, and access extremely large volumes of geographic content. In this version of the standard, initial harmonization with the OGC and ISO standards baseline has begun. For example, where appropriate, the CDB simulation community terms and definitions have been replaced with OGC/ISO terms and definitions. Further, the standards documents have been reorganized and structured to be consistent with the OGC Modular Specification Policy. However, the CDB SWG and community recognize the need to further harmonize and align this standard with the OGC baseline and other IT best practices. There has already been considerable discussion in this regard.
+
 Based on such discussions and comments received during the public comment period, the following future work tasks are envisioned:
 
 .	Describe explicitly how the CDB model may or may not align with the OGC DGGS standard;
@@ -66,8 +68,6 @@ Based on such discussions and comments received during the public comment period
 .	Further align CDB terminology to be fully consistent with OGC/ISO terminology.
 
 Making these enhancements will allow the use and implementation of a CDB structured data store for application areas other than aviation simulators.
-
-
 
 [big]*vii.     CDB Document Guide*
 
@@ -94,21 +94,7 @@ For the purposes of being able to cross reference this OGC Best Practice with th
 |Formerly Annex S, Volume 2 |Annex S: Default Read and Write values to be used by Simulator Client-Devices
 |=========================================================================================================
 
-For ease of editing and review, the standard has been separated into 12 Volumes and a schema repository.
-
-* Volume 0: OGC CDB Companion Primer for the CDB standard. (Best Practice)
-* Volume 1: OGC CDB Core Standard: Model and Physical Data Store Structure. The main body (core) of the CDB standard (Normative).
-* Volume 2: OGC CDB Core Model and Physical Structure Annexes (Best Practice).
-* Volume 3: OGC CDB Terms and Definitions (Normative).
-* Volume 4: OGC CDB Use of Shapefiles for Vector Data Storage (Best Practice).
-* Volume 5: OGC CDB Radar Cross Section (RCS) Models (Best Practice).
-* Volume 6: OGC CDB Rules for Encoding Data using OpenFlight (Best Practice).
-* Volume 7: OGC CDB Data Model Guidance (Best Practice).
-* Volume 8: OGC CDB Spatial Reference System Guidance (Best Practice).
-* Volume 9: OGC CDB Schema Package: provides the normative schemas for key features types required in the synthetic modelling environment. Essentially, these schemas are designed to enable semantic interoperability within the simulation context. (Normative)
-* Volume 10: OGC CDB Implementation Guidance (Best Practice).
-* Volume 11: OGC CDB Core Standard Conceptual Model (Normative)
-* Volume 12: OGC CDB Navaids Attribution and Navaids Attribution Enumeration Values (Best Practice)
+include::list_of_volumes.adoc[]
 
 [big]*viii.     Terms, Definitions, and Abbreviations*
 
