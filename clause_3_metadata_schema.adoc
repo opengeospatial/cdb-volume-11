@@ -87,7 +87,7 @@ The “XML_Version” attribute is used to indicate the version of the XML file 
 
 Each CDB version has a version control file that is called Version.xml. Its contents should be defined and validated by the following UML diagram which is generated from the content of Defaults.xsd in the schema folder of the CDB.
 
-The optional <PreviousIncrementalRootDirectory> element is used to refer to another CDB Version. This is the mechanism used to chain together two CDB versions. The mandatory <Specification> element indicates the CDB standard that is used to produce the content of the CDB Version. Note that version numbers of the standard are limited to the version numbers from the legacy industry-maintained CDB specification: 3.2, 3.1, and 3.0, and OGC V1.0 from this standard; other values are not permitted. Finally, the optional <Extension> element indicates that this CDB Version is in fact a CDB Extension. A version control file that does not have a CDB Extension indicates that the CDB Version holds content that strictly follows the CDB standard.
+The optional <PreviousIncrementalRootDirectory> element is used to refer to another CDB Version. This is the mechanism used to chain together two CDB versions. The mandatory <Specification> element indicates the CDB standard that is used to produce the content of the CDB Version. Note that version numbers of the standard are limited to the version numbers from the legacy industry-maintained CDB specification, specifically 3.2, 3.1, and 3.0. For the OGC standard, allowed versions are 1.0, 1.1, and 1.2. All the OGC versions are backwards compatible. Other values are not permitted. Finally, the optional <Extension> element indicates that this CDB Version is in fact a CDB Extension. A version control file that does not have a CDB Extension indicates that the CDB Version holds content that strictly follows the CDB standard.
 
 A CDB Extension corresponds to user defined information, which is not described or supported by the CDB standard, stored within the CDB Version. As an example, such additional information could be client or vendor-specific information used to increase system performance. Any user defined information shall not replace or be used in place of existing CDB information. A CDB Extension only contains vendor or device specific information.
 
@@ -135,12 +135,11 @@ image::images/image18.png[image,width=500,height=472]
 The UML diagram is composed of three majors sections (i.e. attributes, units and scalers), the first one being the most important. The file has a list of attributes, followed by two lists of units and scalers that are referenced by an individual attribute. The main properties of the vector attributes’ UML diagram are documented below.
 
 [cols=",,,",]
-|==================================================================================================================================================================
+|===
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
 |Vector_Attributes |Attributes are defined through 3 lists: 1) the attributes themselves, 2) their units, and 3) their scalers. |Vector_Attributes |One (mandatory)
 |Version |This represents the version number of the file which has two components: major and minor. |String |One (mandatory)
-|==================================================================================================================================================================
-
+|===
 
 === 3D Model Metadata
 
@@ -150,11 +149,10 @@ This following UML presents an XML schema file in the CDB schema folder which de
 .UML diagram of 3D model metadata
 image::images/image19.png[image,width=624,height=518]
 
-
 The main properties of the 3D model metadata UML diagram are documented below.
 
 [cols=",,,",]
-|=======================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+|===
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
 |3D_Model_Metadata |The metadata associated with a model is made of up to seven elements. |XML |One (mandatory)
 |Identification |A 3D model is either a moving model with a DIS Entity Type, or a cultural feature with a feature code (FC). |DIS or FC |One (mandatory)
@@ -171,4 +169,4 @@ The main properties of the 3D model metadata UML diagram are documented below.
 |Equipment |Equipment is defined by either a DIS key or an external part - and possibly both. An external part is identified by its part number. Optionally the part may have its own configuration. |Equipment |One (mandatory)
 |DIS identification |A DIS identification is either a DIS entity type or a DIS emitter name. A DIS emitter name is a 16-bit unsigned integer. |integer |One (mandatory)
 |Composite material table |A composite material table is a list of one or more composite materials. Each one has a unique identification number, a name, and one or more substrates. A substrate has a certain thickness and is composed of one or more base materials. Each material in a substrate is identified by the name of its base material and by its proportion in the substrate. A percentage is an integer in the range [1,100]. |Composite |One (mandatory)
-|=======================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+|===
