@@ -2,16 +2,15 @@
 
 A conceptual model is a representation of a system, made of the composition of concepts which are used to help people know, understand, or simulate a subject the model represents. A documented conceptual model represents 'concepts' (entities), the relationships between them, and a vocabulary. This document details the conceptual model for a CDB data store.
 
-In this document, conceptual modelling is a structural methodology for describing how the components of a CDB data store may be implemented based on the modular specification design of the OGC CDB Core Standard. The following table defines the general CDB data store requirement and an overview of key elements implemented in a compliant CDB data store.
+In this document, conceptual modelling is used as a structural methodology for describing how the components of a CDB data store may be implemented based on the requirements amd guidance specified in the OGC CDB Core Standard. The following table defines the general CDB data store requirement and an overview of key elements implemented in a compliant CDB data store.
 
 include::requirements/REQ001.adoc[]
 
-This section presents the conceptual model for an OGC CDB compliant data store. This model can used as the basis for the CDB standard in other application domains, along with its requirements, extension, file-based structure, data formats, access, and the discovery of services.
+This section describes the conceptual model for an OGC CDB compliant data store. This model can used as the basis for the CDB standard in other application domains, along with its requirements, extension, file-based structure, data formats, access, and the discovery of services.
 
 [#img_PackagediagramofOGCCDBdatastoreconceptualmodel,reftext='{figure-caption} {counter:figure-num}']
 .Package diagram of OGC CDB data store conceptual model
 image::images/image1.png[image,width=552,height=441]
-
 
 The CDB data store structure is designed to provide efficient access to any location enabled content accessible in the data store. The main properties of the CDB data store UML diagram are documented below.
 
