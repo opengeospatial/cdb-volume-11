@@ -1,6 +1,6 @@
 == CDB General Data Organization
 
-The CDB is composed of several datasets that share a common structure. The following sections present the general organization and structure of all CDB datasets. The CDB standard does not define or enforce an operating system or file system. Nonetheless, the implementation of a CDB storage sub-system must conform to absolute minimum file system requirements called for by the standard. A CDB data store uses existing common file formats for storing data in various formats such as TIFF/GeoTIFF (raster data), JPEG 2000 (imagery data), OpenFlight (3D models), GeoPackages (vector data and radar cross sections), ShapeFiles (vector data and radar cross sections), SGI image format aka RGB (textures), XML (Metadata) and ZIP (file collection). The current version of CDB uses a consolidation of data dictionaries from DIGEST, DGIWG, SEDRIS and UHRB (See Volume 3: CDB Terms and Definitions). In addition, it is possible to extend the CDB Feature Data Dictionary (FDD) by using the extension capabilities and adding a new FDD XML schema file to access additional feature data codes. The UML diagram in Figure 3 describes how the data is categorized in tiles, layers and LODs. This is the basis for the CDB geospatial data categorization.
+The CDB is composed of several datasets that share a common structure. The following sections present the general organization and structure of all CDB datasets. The CDB standard does not define or enforce an operating system or file system. Nonetheless, the implementation of a CDB storage sub-system must conform to absolute minimum file system requirements called for by the standard. A CDB data store uses existing common file formats for storing data in various formats such as TIFF/GeoTIFF (raster data), JPEG 2000 (imagery data), OpenFlight (3D models), GeoPackages (vector data and radar cross sections), ShapeFiles (vector data and radar cross sections), SGI image format aka RGB (textures), XML (Metadata) and ZIP (file collection). The current version of CDB uses a consolidation of data dictionaries from DIGEST, DGIWG, SEDRIS and UHRB (See Volume 3: CDB Terms and Definitions). In addition, it is possible to extend the CDB Feature Data Dictionary (FDD) by using the extension capabilities and adding a new FDD XML schema file to access additional feature data codes. The UML diagram in Figure 3 describes how the data is categorized in tiles, layers and LoDs. This is the basis for the CDB geospatial data categorization.
 
 [#img_UMLdiagramoftheCDBgeneraldataorganization,reftext='{figure-caption} {counter:figure-num}']
 .UML diagram of the CDB general data organization
@@ -10,11 +10,11 @@ image::images/image3.jpeg[Picture41.jpg,width=538,height=835]
 This diagram is the general data organization for the CDB. The main properties of the CDB general data organization UML diagram are documented below.
 
 [cols=",,,",]
-|======================================================================================================================================================================================================================================================================================================
+|===
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
-|Raster Dataset |Data elements are organized into a regular grid evenly positioned. Raster Datasets always have a fixed number of elements corresponding to their LOD spec. |Raster data formats supported in CDB Core Standard for elevation, imagery, texture and grid data. |Zero or more (optional)
+|Raster Dataset |Data elements are organized into a regular grid evenly positioned. Raster Datasets always have a fixed number of elements corresponding to their LoD specification. |Raster data formats supported in CDB Core Standard for elevation, imagery, texture and grid data. |Zero or more (optional)
 |Vector +
-Dataset |The point, the lineal, and the areal (polygon) features of the CDB are organized into several Vector Datasets and into LODs. For each CDB LOD, the maximum number of points allowed per Tile-LOD and the resulting average Feature Density is defined. a|
+Dataset |The point, the lineal, and the areal (polygon) features of the CDB are organized into several Vector Datasets and into LoDs. For each CDB LoD, the maximum number of points allowed per Tile-LoD and the resulting average Feature Density is defined. a|
 RMDescriptor, GSFeature, GTFeature, GeoPolitical, VectorMateria, RoadNetwork, RailRoadNetwork, PowerLineNetwork, HydrographyNetwork,
 
 vectors(Shape)
@@ -29,14 +29,14 @@ OpenFlight models
 
  |Zero or more (optional)
 |Navigation |Navigation library is composed of a single dataset. |NavData |Zero or more (optional)
-|======================================================================================================================================================================================================================================================================================================
+|===
 
-=== LOD and Geocell
+=== LoD and Geocell
 
-This section shows the relationship between the tile structure, layers and LODs. As can be seen in Figure 4, any TileGeoCell class may have any number of layers and each layer is associated with a LOD matrix set.
+This section shows the relationship between the tile structure, layers and LoDs. As can be seen in Figure 4, any TileGeoCell class may have any number of layers and each layer is associated with a LoD matrix set.
 
 [#img_UMLdiagramoftheGeocell,tileandLODconcept,reftext='{figure-caption} {counter:figure-num}']
-.UML diagram of the Geocell, tile and LOD concept
+.UML diagram of the Geocell, tile and LoD concept
 image::images/image4.png[image,width=366,height=415]
 
 === CDB File System
@@ -52,7 +52,7 @@ The CDB data store is composed of several datasets that usually reside in their 
 * \CDB\Tiles\: This is the entry directory that contains all tiles within the CDB instance.
 * \CDB\Navigation\: This is the entry directory that contains the global Navigation datasets.
 
-Most of the CDB datasets are organized in a tile structure and stored under \CDB\Tiles\ directory. The tile structure facilitates access to the information in real-time by any runtime client-devices. However, for some datasets such as Moving Models or Geotypical Models that require minimal storage, there is no significant advantage to their being added into such a tile structure. Such datasets are referred to as global datasets. They consist of data elements that are global to the earth.
+Most of the CDB datasets are organized in a tiled structure and stored under \CDB\Tiles\ directory. The tiled structure facilitates access to the information in real-time by any runtime client-devices. However, for some datasets such as Moving Models or Geotypical Models that require minimal storage, there is no significant advantage to their being added into such a tile structure. Such datasets are referred to as global datasets. They consist of data elements that are global to the earth.
 
 A CDB Version is a collection of CDB and/or user-defined datasets. A CDB Version contains data belonging to a single version of a CDB conformant data store. One CDB Version may refer to another one, which is the basis for the CDB File Replacement Mechanism. The concept of a CDB Version is illustrated using the following UML diagram (Figure 4).
 
@@ -70,17 +70,17 @@ The term Model refers to all of the modeled representations of a cultural featur
 .UML package diagram of the model type
 image::images/image6.png[image,width=513,height=339]
 
-The term Model-LOD refers to a specific level of detail of a Model. The main properties of the CDB 2D/3D model type UML diagram are listed below.
+The term Model-LoD refers to a specific level of detail of a Model. The main properties of the CDB 2D/3D model type UML diagram are listed below.
 
 [cols=",,,",]
-|=================================================================================================================================================================================================================================
+|===
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
 |Model_Type |The modeled representation of a feature primarily consists of its geometry and textures and encompasses its exterior and interior. |3D model formats supported by the CDB such as OpenFlight |Zero or more (optional)
 |3DGTModel |Geotypical 3D Model is a geotypical representation of a point-feature that is anchored to the ground. |3D model formats supported by the CDB such as OpenFlight |Zero or more (optional)
 |3DGSModel |Geospecific 3D Model is geospecific representation of a point, lineal- or areal feature that is anchored to the ground. |3D model formats supported by the CDB such as OpenFlight |Zero or more (optional)
 |T2DModel |Tiled 2D Model is geospecific or geotypical representations of lineal and areal (polygon) features that are anchored to the ground. |2D model formats supported by the CDB such as shapefiles |Zero or more (optional)
 |3DMModel |3D modeled representations of point-features that are not anchored to the ground. |3D model formats supported by the CDB such as OpenFlight |Zero or more (optional)
-|=================================================================================================================================================================================================================================
+|===
 
 ==== 3D Moving Model
 
@@ -100,9 +100,9 @@ The “xml_version” attribute of a moving model code is used to indicate the v
 
 === Vector Data Model
 
-Vector tiles differ from their raster counterpart in three important ways. First of all, the vector tiles’ internal structure permits a non-uniform distribution of elements within the tile, i.e., the position of each element within the tile is explicit. Secondly, the vector tiles’ internal structure permits a variable number of elements within a tile’s boundary. Finally, the distribution of the element types from a single list can be controlled.
+Tiled vector data differs from their raster counterpart in three important ways. First of all, the tiled vector data  internal structure permits a non-uniform distribution of elements within the tile: i.e., the position of each element within the tile is explicit. Secondly, the tiled vector data's internal structure permits a variable number of elements within a tile’s boundary. Finally, the distribution of the element types from a single list can be controlled.
 
-Conceptually, the LOD of a vector tile implicitly provides the average density of elements within the tile. The run-time level-of-detail behavior that controls the rendered number of data elements depends on various parameters and on the off-line filtering process.
+Conceptually, the LoD for tiled vector data implicitly provides the average density of elements within the tile. The run-time LoD behavior that controls the rendered number of data elements depends on various parameters and on the off-line filtering process.
 
 [#img_UMLdiagramofvectordatamodel,reftext='{figure-caption} {counter:figure-num}']
 .UML diagram of vector data model
