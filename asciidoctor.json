@@ -1,0 +1,12 @@
+{
+        "1": {
+                "OGC_doc_number": "16-007r5",
+                "urn":"http://www.opengis.net/doc/IS/CDB-core-model/1.2",
+                "title":"Volume 11: OGC CDB Core Standard Conceptual Model",
+                "path":"standard_document.adoc",
+                "options": ["--trace"],
+                "a":[
+                        "data-uri"
+                ]
+        }
+}
