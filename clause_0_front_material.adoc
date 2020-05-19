@@ -64,7 +64,7 @@ Based on such discussions and comments received during the public comment period
 
 .	Describe explicitly how the CDB model may or may not align with the OGC DGGS standard;
 .	Provide best practice details on how to use WMS, WFS, and WCS to access existing CDB data stores. This work may require Interoperability Experiments to better understand the implications of these decisions;
-.	Extend the supported encodings and formats for a CDB data store to include the use of the OGC GeoPackage, CityGML, and InDoorGML standards as well as other broadly used community encoding standards, such as GeoTIFF. This work may require performing OGC Interoperability Experiments to better understand the implications of these decisions.
+.	Extend the supported encodings and formats for a CDB data store to include the use of the OGC GeoPackage, CityGML, and InDoorGML standards as well as other broadly used community encoding standards, such as GeoTIFF. This work may require performing OGC Interoperability Experiments to better understand the implications of these decisions. Please note that in CDB version 1.2, GeoPackage containers can be used in a CDB data store.
 .	Further align CDB terminology to be fully consistent with OGC/ISO terminology.
 
 Making these enhancements will allow the use and implementation of a CDB structured data store for application areas other than aviation simulators.
