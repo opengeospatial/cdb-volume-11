@@ -17,7 +17,7 @@ The CDB data store structure is designed to provide efficient access to any loca
 [cols=",,,",]
 |===
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
-|Tile |Geographically divides the world into geodetic tiles (bounded by latitudes and longitudes), each containing at least a dataset |Dataset type. |One or more (mandatory)
+|Tile |geometric shape with known properties that may or may not be the result of a tiling (tessellation) process. A tile consists of a single connected "piece" (topological disc) without "holes" or "lines". [OGC TIling Abstract Specification] Note: In CDB, geographically divides the world into geodetic tiles (bounded by latitudes and longitudes), each containing at least a dataset |Dataset type. |One or more (mandatory)
 |LoD Hierarchy |Each dataset layer has a LoD hierarchy. |Hierarchy of raster, vector and models. |One (mandatory)
 |Dataset |Defines the basic storage unit used in a CDB data store. |Layers of data |One (mandatory)
 |Models |Includes 3D representations of cultural features and moving models such as buildings, pylons and posts, aircraft and other moving platforms. 3D models have various model components |Model data formats supported in CDB standard. |Zero or more (optional)
