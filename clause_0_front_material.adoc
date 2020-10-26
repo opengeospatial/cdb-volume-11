@@ -15,7 +15,7 @@ ogcdoc, OGC document, UML, conceptual model, raster, tiles, vector, CDB, Common 
 
 The industry-maintained CDB model and data store structure has been discussed and demonstrated at OGC Technical Committee meetings since September 2013. This document, the first UML conceptual model for OGC CDB standard, is one of the 15 documents that comprise the OGC CDB modular standard. The UML conceptual model establishes a single set of consistent concepts that could be also implemented using other encoding mechanisms.
 
-The CDB standard is originally based on the OGC CDB Best Practice documents, which were submitted to the OGC by CAE Inc. on behalf of the CDB implementation community and user group. CDB is currently widely implemented in the defence and aviation simulation communities. The intent is that this initial OGC version of the CDB standard be backwards compatible with existing implementations but that terminology and concepts be aligned as appropriate with the OGC technical baseline. Future work is planned to align the standard with other OGC standards and to provide Best Practices focused on how to use CDB with the existing OGC standards baseline, such as CityGML, Web Map Service (WMS), Web Feature Service (WFS), and Web Coverage Service (WCS). A GeoPackage capability was defined for version 1.2 of the OGC CDB standard.
+The CDB standard is originally based on the OGC CDB Best Practice documents, which were submitted to the OGC by CAE Inc. on behalf of the CDB implementation community and user group. CDB is currently widely implemented in the defense and aviation simulation communities. The intent is that this initial OGC version of the CDB standard be backwards compatible with existing implementations but that terminology and concepts be aligned as appropriate with the OGC technical baseline. Future work is planned to align the standard with other OGC standards and to provide Best Practices focused on how to use CDB with the existing OGC standards baseline, such as CityGML, Web Map Service (WMS), Web Feature Service (WFS), and Web Coverage Service (WCS). A GeoPackage capability was defined for version 1.2 of the OGC CDB standard.
 
 Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
 
@@ -105,7 +105,7 @@ For ease of editing and review, the standard has been separated into 16 Volumes,
 * Volume 6: OGC CDB Rules for Encoding CDB Models using OpenFlight (Best Practice).
 * Volume 7: OGC CDB Data Model Guidance (Best Practice).
 * Volume 8: OGC CDB Spatial Reference System Guidance (Best Practice).
-* Volume 9: OGC CDB Schema Package: http://schemas.opengis.net/cdb/ provides the normative schemas for key features types required in the synthetic modelling environment. Essentially, these schemas are designed to enable semantic interoperability within the simulation context (Normative).
+* Volume 9: OGC CDB Schema Package: http://schemas.opengis.net/cdb/ provides the normative schemas for key features types required in the synthetic modeling environment. Essentially, these schemas are designed to enable semantic interoperability within the simulation context (Normative).
 * Volume 10: OGC CDB Implementation Guidance (Best Practice).
 * Volume 11: OGC CDB Core Standard Conceptual Model (Normative).
 * Volume 12: OGC CDB Navaids Attribution and Navaids Attribution Enumeration Values (Best Practice).

@@ -132,7 +132,7 @@ The CDB attributes are listed and described in Volume 1: CDB Core section 5.7.1.
 image::images/image18.png[image,width=500,height=472]
 
 
-The UML diagram is composed of three majors sections (i.e. attributes, units and scalers), the first one being the most important. The file has a list of attributes, followed by two lists of units and scalers that are referenced by an individual attribute. The main properties of the vector attributes’ UML diagram are documented below.
+The UML diagram is composed of three majors sections (i.e., attributes, units and scalers), the first one being the most important. The file has a list of attributes, followed by two lists of units and scalers that are referenced by an individual attribute. The main properties of the vector attributes’ UML diagram are documented below.
 
 [cols=",,,",]
 |===

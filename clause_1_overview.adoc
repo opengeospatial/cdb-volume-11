@@ -2,7 +2,7 @@
 
 A conceptual model is a representation of a system, made of the composition of concepts which are used to help people know, understand, or simulate a subject the model represents. A documented conceptual model represents 'concepts' (entities), the relationships between them, and a vocabulary. This document details the conceptual model for a CDB data store.
 
-In this document, conceptual modelling is used as a structural methodology for describing how the components of a CDB data store may be implemented based on the requirements amd guidance specified in the OGC CDB Core Standard. The following table defines the general CDB data store requirement and an overview of key elements implemented in a compliant CDB data store.
+In this document, conceptual modeling is used as a structural methodology for describing how the components of a CDB data store may be implemented based on the requirements and guidance specified in the OGC CDB Core Standard. The following table defines the general CDB data store requirement and an overview of key elements implemented in a compliant CDB data store.
 
 include::requirements/REQ001.adoc[]
 
@@ -17,7 +17,7 @@ The CDB data store structure is designed to provide efficient access to any loca
 [cols=",,,",]
 |===
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
-|Tile |geometric shape with known properties that may or may not be the result of a tiling (tessellation) process. A tile consists of a single connected "piece" (topological disc) without "holes" or "lines". [OGC TIling Abstract Specification] Note: In CDB, geographically divides the world into geodetic tiles (bounded by latitudes and longitudes), each containing at least a dataset |Dataset type. |One or more (mandatory)
+|Tile |geometric shape with known properties that may or may not be the result of a tiling (tessellation) process. A tile consists of a single connected "piece" (topological disc) without "holes" or "lines". [OGC Tiling Abstract Specification] Note: In CDB, geographically divides the world into geodetic tiles (bounded by latitudes and longitudes), each containing at least a dataset |Dataset type. |One or more (mandatory)
 |LoD Hierarchy |Each dataset layer has a LoD hierarchy. |Hierarchy of raster, vector and models. |One (mandatory)
 |Dataset |Defines the basic storage unit used in a CDB data store. |Layers of data |One (mandatory)
 |Models |Includes 3D representations of cultural features and moving models such as buildings, pylons and posts, aircraft and other moving platforms. 3D models have various model components |Model data formats supported in CDB standard. |Zero or more (optional)
