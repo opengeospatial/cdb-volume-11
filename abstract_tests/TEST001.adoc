@@ -1,7 +1,7 @@
 [cols=",,",]
 |==================================================================================================================================================================================================
-|*Conformance Class* {set:cellbgcolor:#CACCCE} 2+|http://opengis.net/spec/CDB/1.0/conf/core/OveralConceptualModel
-|*Requirements* {set:cellbgcolor:#FFFFFF} 2+|http://opengis.net/spec/CDB/1.0/core/OveralConceptualModel
+|*Conformance Class* {set:cellbgcolor:#CACCCE} 2+|http://www.opengis.net/spec/CDB/1.0/conf/core/OveralConceptualModel
+|*Requirements* {set:cellbgcolor:#FFFFFF} 2+|http://www.opengis.net/spec/CDB/1.0/core/OveralConceptualModel
 |*Dependency* 2+|All of the requirements of the OGC CDB core document
 |*Test Class 1* {set:cellbgcolor:#CACCCE}|{set:cellbgcolor:#FFFFFF} Test purpose |Verify to test requirement class 1{set:cellbgcolor:#FFFFFF}
 | {set:cellbgcolor:#CACCCE} |{set:cellbgcolor:#FFFFFF} Test method |Review that the CDB dataset complies with the corresponding mandatory requirements of the OGC CDB core standard.
