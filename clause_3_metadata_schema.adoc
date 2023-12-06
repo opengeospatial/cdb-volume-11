@@ -44,7 +44,8 @@ image::images/image13.png[image,width=511,height=287]
 
 The main properties of the base materials table UML diagram are documented below.
 
-[cols=",,,",]
+[#table_BaseMaterial_UML]
+.The definition of major properties of base materials UML diagram
 |=======================================================================================================================================================================================
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
 |Base_Material |This element defines one CDB Base Material by giving it a unique name. It is recommended to provide a description. |XML |One or more (mandatory)
@@ -63,7 +64,8 @@ image::images/image14.png[image,width=491,height=384]
 
 The main properties of the composite material tables’ UML diagram are documented below.
 
-[cols=",,,",]
+[#table_CompositeMaterial_UML]
+.The definition of major properties of composite materials UML diagram
 |=====================================================================================================================================================================================================================================
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
 |Composit_Material |Each composite material has a unique identification number, a name, and one or more substrates. |XML |One or more (mandatory)
@@ -111,9 +113,11 @@ The Configuration metadata file provides the means of defining CDB Configuration
 image::images/image17.png[image,width=453,height=377]
 
 
-A single XML file, named Configuration.xml, completely defines the configuration of a CDB. This way, the client application does not have to traverse the linked list of CDB Versions through the 'PreviousIncrementalRootDirectory' element found in Version.xml. The main properties of the configuration metadata UML diagram are documented below.
+A single XML file, named Configuration.xml, completely defines the configuration of a CDB. This way, the client application does not have to traverse the linked list of CDB Versions through the 'PreviousIncrementalRootDirectory' element found in Version.xml.
+The main properties of the configuration metadata UML diagram are documented below.
 
-[cols=",,,",]
+[#table_Configuration_UML]
+.The definition of major properties of configuration metadata UML diagram
 |===============================================================================================================================================================================================================================================================================================================================================================
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
 |Configuration |The CDB Configuration is a simple list of one or more CDB Versions. |XML |One or more (mandatory)
@@ -125,21 +129,89 @@ A single XML file, named Configuration.xml, completely defines the configuration
 
 === CDB Vector Attributes
 
-The CDB attributes are listed and described in Volume 1: CDB Core section 5.7.1.3 CDB Attributes. The controlled vocabulary for these attributes is stored in \CDB\Metadata\CDB_Attributes.xml and the following diagram indicates the schema file as provided in the CDB schema folder, Vector_Attributes.xsd. In essence, the file is the transposition of CDB Attributes into a format more appropriate for a computer program.
+The CDB attributes are listed and described in Volume 1: CDB Core section: CDB Attribution.
+The controlled vocabulary for these attributes is stored in \CDB\Metadata\CDB_Attributes.xml and the following diagram indicates the schema file as provided in the CDB schema folder, `Vector_Attributes.xsd`.
+In essence, the file is the transposition of CDB Attributes into a format more appropriate for a computer program.
 
 [#img_UMLdiagramoftheCDBvectorattributes,reftext='{figure-caption} {counter:figure-num}']
 .UML diagram of the CDB vector attributes
 image::images/image18.png[image,width=500,height=472]
 
 
-The UML diagram is composed of three majors sections (i.e., attributes, units and scalers), the first one being the most important. The file has a list of attributes, followed by two lists of units and scalers that are referenced by an individual attribute. The main properties of the vector attributes’ UML diagram are documented below.
+The UML diagram is composed of three elements (i.e., attributes, units and scalers), the first one being the most important.
+_Value_ contains the main properties of the vector attributes i.e. data type, enumeration, length, format, range, usage, units, compatibility.
+The main properties of the vector attributes’ UML diagram are documented below.
 
-[cols=",,,",]
+[#table_VectorAttribute_UML]
+.The definition of major properties of vector attributes UML diagram
 |===
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
-|Vector_Attributes |Attributes are defined through 3 lists: 1) the attributes themselves, 2) their units, and 3) their scalers. |Vector_Attributes |One (mandatory)
-|Version |This represents the version number of the file which has two components: major and minor. |String |One (mandatory)
+
+| Vector_Attributes
+| Attributes are defined through 3 lists: 1) the attributes themselves, 2) their units, and 3) their scalers.
+| Vector_Attributes ComplexType
+| One (mandatory)
+
+| Version
+| This represents the version number of the file which has two components: major and minor.
+| String
+| One (mandatory)
+
+| Attributes
+| Attributes are used to describe one or more real or virtual characteristics of a feature. Attributes have three characteristics: +
+  - _Code_: A unique four-digit numeric code associated with each attribute. +
+  - _Symbol_ (Identifier): A unique three-character or four-character alphanumeric identifier associated with the attributes that are governed by this standard. +
+  - _Deprecated_: States if the attribute is deprecated or not.
+| Vector_Attributes ComplexType
+| One or more (mandatory)
+
+| Level
+| It provides the schema level of the attribute such as class-level, instance-level and extended-level.
+| Level ComplexType
+| One (mandatory)
+
+| Value
+| Attribute values give quantitative/qualitative meaning to the attribute. This property includes data type, enumeration, length, format, range, usage, units, and compatibility of each attribute.
+| Value ComplexType
+| One (mandatory)
+
+| Compatibility
+| Provides compatibility and origin of attributes specified in the OGC CDB V1.x Standard. The current values are OGC CDB 1.0, DIGEST 2.1, DIGEST, and SEDRIS.
+| Compatibility ComplexType
+| Zero or more
+
+| Allocation
+| This element shows allocation of CDB attributes to each of the Vector datasets. The CDB Standard limits the applicability of each of the CDB attributes to certain vector datasets.
+| Allocation ComplexType
+| Zero or more
+
+| Units
+| A list of Unit definitions, such as meters and degrees.
+| Units ComplexType
+| One or more (mandatory)
+
+| Scalers
+| A list of Scaler definitions, such as kilo, with a code and symbol for each Scaler.
+| Scalers ComplexType
+| One or more (mandatory)
+
 |===
+
+[NOTE]
+====
+As described in CDB V1.3  - Volume 10 (CDB Attribution Roadmap), CDB V1.3 attribute schema (`Vector_Attributes.xsd`) is modified from the previous versions.
+Based on recommendations generated by the SOFWERX Sprint ER Attributions sub-group, CDB attribute schema is enhanced to be more compatible with other modernized attribute schemas (e.g., NAS).
+These changes to the vector attribute schema are itemized below:
+
+. `Definition` property added to "Attributes"
+. `UsageNote` property added to "Attributes"
+. `Compatibility (Origin)` ComplexType added to "Attributes"
+. `Allocation` ComplexType added to "Attributes"
+. `Default` property added to "Value" of "Attributes"
+. `Enumeration` property added to "Value" of "Attributes"
+
+For more information on these changes please refer to CDB V1.3  - Volume 10 (CDB Attribution Roadmap).
+====
 
 === 3D Model Metadata
 
@@ -151,7 +223,8 @@ image::images/image19.png[image,width=624,height=518]
 
 The main properties of the 3D model metadata UML diagram are documented below.
 
-[cols=",,,",]
+[#table_3DMode_UML]
+.The definition of major properties of 3D model metadata UML diagram
 |===
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
 |3D_Model_Metadata |The metadata associated with a model is made of up to seven elements. |XML |One (mandatory)
