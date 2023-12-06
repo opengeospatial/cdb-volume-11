@@ -7,11 +7,9 @@ The CDB is composed of several datasets that share a common structure. The follo
 image::images/image3.jpeg[Picture41.jpg,width=538,height=835]
 
 
-This diagram is the general data organization for the CDB.
-The main properties of the CDB general data organization UML diagram are documented below.
+This diagram is the general data organization for the CDB. The main properties of the CDB general data organization UML diagram are documented below.
 
-[#table_Data_Org_UML]
-.The definition of major properties of CDB general data organization UML diagram
+[cols=",,,",]
 |===
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
 |Raster Dataset |Data elements are organized into a regular grid evenly positioned. Raster Datasets always have a fixed number of elements corresponding to their LoD specification. |Raster data formats supported in CDB Core Standard for elevation, imagery, texture and grid data. |Zero or more (optional)
@@ -72,11 +70,9 @@ The term Model refers to all of the modeled representations of a cultural featur
 .UML package diagram of the model type
 image::images/image6.png[image,width=513,height=339]
 
-The term Model-LoD refers to a specific level of detail of a Model.
-The main properties of the CDB 2D/3D model type UML diagram are listed below.
+The term Model-LoD refers to a specific level of detail of a Model. The main properties of the CDB 2D/3D model type UML diagram are listed below.
 
-[#table_Model_Type_UML]
-.The definition of major properties of CDB 2D/3D model type UML diagram
+[cols=",,,",]
 |===
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
 |Model_Type |The modeled representation of a feature primarily consists of its geometry and textures and encompasses its exterior and interior. |3D model formats supported by the CDB such as OpenFlight |Zero or more (optional)

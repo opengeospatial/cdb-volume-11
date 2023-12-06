@@ -9,8 +9,7 @@ image::images/image21.png[image,width=577,height=340]
 
 The main properties of the feature data dictionary UML diagram are documented below.
 
-[#table_FDD_UML]
-.The definition of major properties of feature data dictionary UML diagram
+[cols=",,,",]
 |============================================================================================================================================================================
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
 |AlphaCode |The code of the category or subcategory. |string |One (mandatory)

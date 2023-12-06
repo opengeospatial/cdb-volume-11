@@ -1,7 +1,7 @@
 [width="90%",cols="2,6"]
 |===
 |*Requirement Class 1* {set:cellbgcolor:#CACCCE}|{set:cellbgcolor:#FFFFFF}
-|Req. ID {set:cellbgcolor:#CACCCE}|http://opengis.net/spec/CDB/1.0/core/OverallConceptualModel{set:cellbgcolor:#FFFFFF}
+|Req. ID {set:cellbgcolor:#CACCCE}|http://opengis.net/spec/CDB/1.0/core/OveralConceptualModel{set:cellbgcolor:#FFFFFF}
 |Dependency {set:cellbgcolor:#CACCCE}|Requirements as specified in the OGC CDB core document{set:cellbgcolor:#FFFFFF}
 |Req. Text {set:cellbgcolor:#CACCCE}|A minimum compliant CDB shall contain the version metadata. When any dataset is provided in a CDB, that dataset shall comply with the corresponding mandatory requirements of the OGC CDB Core Standard (Volume 1 http://www.opengeospatial.org/standards/cdb).{set:cellbgcolor:#FFFFFF}
 |===
