@@ -8,7 +8,8 @@ A class diagram shows a collection of declarative (static) model elements, such 
 
 A relationship is a general term covering the specific types of logical connections found on class and objects diagrams. UML shows the following relationships:
 
-[cols=",,",]
+[#UML_Definition]
+.The definition of UML diagram relations
 |===============================================================================================================================================================================================================================================================================================================================================================================================================
 |*Relationships* |*Definition* |*Diagram*
 |Association |It is semantic relationship between two or more classes that specifies links among their instances. In association, an attribute of the dependent class is an instance of the independent class. a|image::images/image22.png[image,width=102,height=60]image::images/image23.png[image,width=138,height=62]
