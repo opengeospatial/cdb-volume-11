@@ -12,9 +12,11 @@ This section describes the conceptual model for an OGC CDB compliant data store.
 .Package diagram of OGC CDB data store conceptual model
 image::images/image1.png[image,width=552,height=441]
 
-The CDB data store structure is designed to provide efficient access to any location enabled content accessible in the data store. The main properties of the CDB data store UML diagram are documented below.
+The CDB data store structure is designed to provide efficient access to any location enabled content accessible in the data store.
+The main properties of the CDB data store UML diagram are documented below.
 
-[cols=",,,",]
+[#table_CDB_CM_UML]
+.The definition of major properties of OGC CDB data store conceptual model UML diagram
 |===
 |*Name* |*Definition* |*Data type & Value* |*Multiplicity*
 |Tile |geometric shape with known properties that may or may not be the result of a tiling (tessellation) process. A tile consists of a single connected "piece" (topological disc) without "holes" or "lines". [OGC Tiling Abstract Specification] Note: In CDB, geographically divides the world into geodetic tiles (bounded by latitudes and longitudes), each containing at least a dataset |Dataset type. |One or more (mandatory)
