@@ -92,7 +92,11 @@ DEM Digital Elevation Model
 
 DIGEST Digital Geographic Exchange Standard
 
+DIS  Distributed Interactive Simulation
+
 DGIWG Defence Geospatial Information Working Group
+
+FC Feature Code
 
 FDD Feature Data Dictionary
 
